@@ -10,4 +10,7 @@
 My Twine Game
 
 :: StoryInit
-<<set $myVariable to 1>>
+/* start with 50 happiness for both job and animals*/
+<<set $animalHappiness to 50>>
+<<set $bossHappiness to 50>>
+
