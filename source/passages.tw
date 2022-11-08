@@ -4,7 +4,12 @@ This is the first passage in your game with just one variable called animalHappi
 :: Passage 2 [Job]
 First job is to build a $job
 Will You:
-[[Carry out the job by destroying the nearby forest|Passage 2]]
-[[Refuse to build today's job|Passage 2]]
-[[Or search for a different location to build today's job|Passage 2]]
+[[Carry out the job by destroying the nearby forest|BuildJob]]
+[[Refuse to build today's job|DenyJob]]
+[[Or search for a different location to build today's job|Search For New Spot]]
 
+:: BuildJob
+
+:: DenyJob
+
+:: Search For New Spot
