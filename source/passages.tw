@@ -2,4 +2,5 @@
 This is the first passage in your game with just one variable called animalHappiness that has a value of $animalHappiness.  There are two passages in this template, and the other can be found [[here|Passage 2]]
 
 :: Passage 2 [Job]
-First job is $job
+First job is a $job
+
