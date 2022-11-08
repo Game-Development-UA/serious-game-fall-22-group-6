@@ -17,5 +17,5 @@ My Twine Game
 
 :: PassageHeader
 <<if tags().includes("Job")>>
-<<set $job to _jobs.pluck()>>
+<<set $job to _jobs.random()>>
 <</if>>
