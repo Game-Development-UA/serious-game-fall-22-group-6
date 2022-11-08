@@ -13,9 +13,9 @@ My Twine Game
 /* start with 50 happiness for both job and animals*/
 <<set $animalHappiness to 50>>
 <<set $bossHappiness to 50>>
-<<set _jobs to ["Hospital","Apartment Complex","Factory", "House"]>>
+<<set $_jobs to ["Hospital","Apartment Complex","Factory", "House"]>>
 
 :: PassageHeader
 <<if tags().includes("Job")>>
-<<set $job to _jobs.random()>>
+<<set $job to $_jobs.random()>>
 <</if>>
