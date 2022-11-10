@@ -10,8 +10,13 @@ Will You:
 
 :: BuildJob [Build]
 You decide to carry out the job without considering the environmental damage that will come from it.
+[[Carry on to the next day| Animal Story]]
 
 :: DenyJob [Deny]
 
 
 :: Search For New Spot [Search]
+
+:: Animal Story
+some interaction
+[[Start work for the day| Job]]
