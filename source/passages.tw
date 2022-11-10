@@ -1,15 +1,17 @@
 :: Start
-This is the first passage in your game with just one variable called animalHappiness that has a value of $animalHappiness.  There are two passages in this template, and the other can be found [[here|Passage 2]]
+This is the first passage in your game with just one variable called animalHappiness that has a value of $animalHappiness.  There are two passages in this template, and the other can be found [[here|Job]]
 
-:: Passage 2 [Job]
+:: Job [Job]
 First job is to build a $job
 Will You:
 [[Carry out the job by destroying the nearby forest|BuildJob]]
 [[Refuse to build today's job|DenyJob]]
 [[Or search for a different location to build today's job|Search For New Spot]]
 
-:: BuildJob
+:: BuildJob [Build]
+You decide to carry out the job without considering the environmental damage that will come from it.
 
-:: DenyJob
-a
-:: Search For New Spot
+:: DenyJob [Deny]
+
+
+:: Search For New Spot [Search]
