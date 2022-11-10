@@ -10,12 +10,19 @@ Will You:
 
 :: BuildJob [Build]
 You decide to carry out the job without considering the environmental damage that will come from it.
+$animalHappiness
+$bossHappiness
 [[Carry on to the next day| Animal Story]]
 
 :: DenyJob [Deny]
-
+$animalHappiness
+$bossHappiness
+[[Carry on to the next day| Animal Story]]
 
 :: Search For New Spot [Search]
+$animalHappiness
+$bossHappiness
+[[Carry on to the next day| Animal Story]]
 
 :: Animal Story
 some interaction

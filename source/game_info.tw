@@ -11,6 +11,7 @@ My Twine Game
 
 :: StoryInit
 /* start with 50 happiness for both job and animals*/
+<<set $environmentHealth to 100>>
 <<set $animalHappiness to 50>>
 <<set $bossHappiness to 50>>
 <<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House"]>>
@@ -19,3 +20,36 @@ My Twine Game
 <<if tags().includes("Job")>>
 <<set $job to $_jobs.random()>>
 <</if>>
+<<if tags().includes("Build")>>
+<<set $animalHappiness to $animalHappiness - 10>>
+<<set $bossHappiness to $bossHappiness + 10>>
+<</if>>
+<<if tags().includes("Deny")>>
+<<set $animalHappiness to $animalHappiness + 10>>
+<<set $bossHappiness to $bossHappiness - 10>>>
+<</if>>
+<<if tags().includes("Search")>>
+<<set $index to either(1,2,3,4)>>
+<<if $index is 1>>
+no other suitable areas, must build in same spot
+<<set $animalHappiness to $animalHappiness - 10>>
+<<set $bossHappiness to $bossHappiness + 10>>
+<</if>>
+<<if $index is 2>>
+decent area but still negative environment
+<<set $animalHappiness to $animalHappiness - 5>>
+<<set $bossHappiness to $bossHappiness + 5>>
+<</if>>
+<<if $index is 3>>
+better environmental but worse business area found
+<<set $animalHappiness to $animalHappiness + 5>>
+<<set $bossHappiness to $bossHappiness - 5>>
+<</if>>
+<<if $index is 4>>
+area that works for both was found, but not as good as original area
+<<set $animalHappiness to $animalHappiness + 5>>
+<<set $bossHappiness to $bossHappiness + 5>>
+<</if>>
+<</if>>
+
+
