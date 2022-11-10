@@ -14,7 +14,9 @@ My Twine Game
 <<set $environmentHealth to 100>>
 <<set $animalHappiness to 50>>
 <<set $bossHappiness to 50>>
+<<set $jimmyVisits to 0>>
 <<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House"]>>
+<<set $storyList to ["Jimmy"]>>
 
 :: PassageHeader
 <<if tags().includes("Job")>>
@@ -23,13 +25,16 @@ My Twine Game
 <<if tags().includes("Build")>>
 <<set $animalHappiness to $animalHappiness - 10>>
 <<set $bossHappiness to $bossHappiness + 10>>
+<<set $story to $storyList.random()>>
 <</if>>
 <<if tags().includes("Deny")>>
 <<set $animalHappiness to $animalHappiness + 10>>
-<<set $bossHappiness to $bossHappiness - 10>>>
+<<set $bossHappiness to $bossHappiness - 10>>
+<<set $story to $storyList.random()>>
 <</if>>
 <<if tags().includes("Search")>>
 <<set $index to either(1,2,3,4)>>
+<<set $story to $storyList.random()>>
 <<if $index is 1>>
 no other suitable areas, must build in same spot
 <<set $animalHappiness to $animalHappiness - 10>>
@@ -50,6 +55,11 @@ area that works for both was found, but not as good as original area
 <<set $animalHappiness to $animalHappiness + 5>>
 <<set $bossHappiness to $bossHappiness + 5>>
 <</if>>
+<</if>>
+
+:: PassageFooter
+<<if tags().includes("Jimmy")>>
+<<set $jimmyVisits to $jimmyVisits + 1>>
 <</if>>
 
 

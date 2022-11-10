@@ -2,7 +2,7 @@
 This is the first passage in your game with just one variable called animalHappiness that has a value of $animalHappiness.  There are two passages in this template, and the other can be found [[here|Job]]
 
 :: Job [Job]
-First job is to build a $job
+Today's job is to build a $job
 Will You:
 [[Carry out the job by destroying the nearby forest|BuildJob]]
 [[Refuse to build today's job|DenyJob]]
@@ -12,18 +12,18 @@ Will You:
 You decide to carry out the job without considering the environmental damage that will come from it.
 $animalHappiness
 $bossHappiness
-[[Carry on to the next day| Animal Story]]
+[[Carry on to the next day| $story]]
 
 :: DenyJob [Deny]
-$animalHappiness
-$bossHappiness
-[[Carry on to the next day| Animal Story]]
+You decide to favor the health of the environment and the animals by not building the $job
+[[Carry on to the next day| $story]]
 
 :: Search For New Spot [Search]
 $animalHappiness
 $bossHappiness
-[[Carry on to the next day| Animal Story]]
+<<link `"Go to " + $story` `$story`>><</link>>
 
-:: Animal Story
+:: Jimmy [Jimmy]
 some interaction
+$jimmyVisits
 [[Start work for the day| Job]]
