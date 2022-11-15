@@ -17,7 +17,7 @@ My Twine Game
 <<set $jimmyVisits to 0>>
 <<set $jimmyDies to 0>>
 <<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House"]>>
-<<set $storyList to ["Jimmy"]>>
+<<set $storyList to ["Jimmy", "AnimalTwo"]>>
 
 :: PassageHeader
 <<nobr>>
