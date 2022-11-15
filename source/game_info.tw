@@ -11,14 +11,16 @@ My Twine Game
 
 :: StoryInit
 /* start with 50 happiness for both job and animals*/
-<<set $environmentHealth to 100>>
+<<set $environmentHealth to 15>>
 <<set $animalHappiness to 50>>
 <<set $bossHappiness to 50>>
 <<set $jimmyVisits to 0>>
+<<set $jimmyDies to 0>>
 <<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House"]>>
 <<set $storyList to ["Jimmy"]>>
 
 :: PassageHeader
+<<nobr>>
 <<if tags().includes("Job")>>
 <<set $job to $_jobs.random()>>
 <</if>>
@@ -56,10 +58,14 @@ area that works for both was found, but not as good as original area
 <<set $bossHappiness to $bossHappiness + 5>>
 <</if>>
 <</if>>
+<</nobr>>
 
 :: PassageFooter
 <<if tags().includes("Jimmy")>>
 <<set $jimmyVisits to $jimmyVisits + 1>>
+<<if $jimmyDies == 1>>
+$storyList.<<remove "Jimmy">>
+<</if>>
 <</if>>
 
 
