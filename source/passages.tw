@@ -12,8 +12,8 @@ Will You:
 <<if $environmentHealth <  20>>
 [[Skip work for the day to plant trees and help the environment| Plant Trees]]
 <</if>>
-<</if>>
 <</nobr>>
+<</if>>
 <<nobr>><<if $bossHappiness <= 0 >>
 Your boss is incredibly unhappy with your recent performance in your job, or lack there of so he decides to fire you
 [[Get fired| Fired]]

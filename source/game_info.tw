@@ -13,7 +13,7 @@ My Twine Game
 /* start with 50 happiness for both job and animals*/
 <<set $environmentHealth to 80>>
 <<set $animalHappiness to 50>>
-<<set $bossHappiness to 50>>
+<<set $bossHappiness to 0>>
 <<set $jimmyVisits to 0>>
 <<set $jimmyDies to 0>>
 <<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House"]>>
