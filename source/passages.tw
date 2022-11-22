@@ -7,11 +7,14 @@ Will You:
 [[Carry out the job by destroying the nearby forest|BuildJob]]
 [[Refuse to build today's job|DenyJob]]
 [[Or search for a different location to build today's job|Search For New Spot]]
+<<nobr>>
+<<if $environmentHealth <  20>>
+[[Skip work for the day to plant trees and help the environment| Plant Trees]]
+<</if>>
+<</nobr>>
 
 :: BuildJob [Build]
 You decide to carry out the job without considering the environmental damage that will come from it.
-$animalHappiness
-$bossHappiness
 [[Carry on to the next day| $story]]
 
 :: DenyJob [Deny]
@@ -20,6 +23,14 @@ You decide to favor the health of the environment and the animals by not buildin
 
 :: Search For New Spot [Search]
 <<link `"Go to " + $story` `$story`>><</link>>
+
+:: Plant Trees
+You decide to skip work for the day and instead go to plant trees in order to help the environment recover from the damage you have done, but at the cost of your boss getting very angry
+<<nobr>>
+<<set $enivronmentHealth to $environmentHealth + 20>>
+<<set $animalHappiness to $animalHappiness + 15>>
+<<set $bossHappiness to $bossHappiness - 20>>
+<</nobr>>
 
 :: Jimmy [Jimmy]
 <<nobr>>
