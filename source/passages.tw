@@ -14,6 +14,10 @@ Will You:
 <</if>>
 <</if>>
 <</nobr>>
+<<nobr>><<if $bossHappiness <= 0 >>
+Your boss is incredibly unhappy with your recent performance in your job, or lack there of so he decides to fire you
+[[Get fired| Fired]]
+<</nobr>><</if>>
 
 :: BuildJob [Build]
 You decide to carry out the job without considering the environmental damage that will come from it.
@@ -34,6 +38,8 @@ You decide to skip work for the day and instead go to plant trees in order to he
 <<set $bossHappiness to $bossHappiness - 20>>
 [[Carry on to the next day| $story]]
 <</nobr>>
+
+:: Fired
 
 :: Jimmy [Jimmy]
 <<nobr>>
