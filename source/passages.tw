@@ -2,6 +2,7 @@
 This is the first passage in your game with just one variable called animalHappiness that has a value of $animalHappiness.  There are two passages in this template, and the other can be found [[here|Job]]
 
 :: Job [Job]
+<<nobr>><<if $bossHappiness > 0>><</nobr>>
 Today's job is to build a $job
 Will You:
 [[Carry out the job by destroying the nearby forest|BuildJob]]
@@ -10,6 +11,7 @@ Will You:
 <<nobr>>
 <<if $environmentHealth <  20>>
 [[Skip work for the day to plant trees and help the environment| Plant Trees]]
+<</if>>
 <</if>>
 <</nobr>>
 
@@ -30,6 +32,7 @@ You decide to skip work for the day and instead go to plant trees in order to he
 <<set $enivronmentHealth to $environmentHealth + 20>>
 <<set $animalHappiness to $animalHappiness + 15>>
 <<set $bossHappiness to $bossHappiness - 20>>
+[[Carry on to the next day| $story]]
 <</nobr>>
 
 :: Jimmy [Jimmy]
