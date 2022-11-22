@@ -8,16 +8,18 @@ Will You:
 [[Carry out the job by destroying the nearby forest|BuildJob]]
 [[Refuse to build today's job|DenyJob]]
 [[Or search for a different location to build today's job|Search For New Spot]]
+<</if>>
 <<nobr>>
 <<if $environmentHealth <  20>>
 [[Skip work for the day to plant trees and help the environment| Plant Trees]]
 <</if>>
 <</nobr>>
-<</if>>
-<<nobr>><<if $bossHappiness <= 0 >>
+<<nobr>>
+<<if $bossHappiness <= 0 >>
 Your boss is incredibly unhappy with your recent performance in your job, or lack there of so he decides to fire you
 [[Get fired| Fired]]
-<</nobr>><</if>>
+<</if>>
+<</nobr>>
 
 :: BuildJob [Build]
 You decide to carry out the job without considering the environmental damage that will come from it.
