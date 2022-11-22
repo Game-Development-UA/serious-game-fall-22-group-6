@@ -2,7 +2,7 @@
 This is the first passage in your game with just one variable called animalHappiness that has a value of $animalHappiness.  There are two passages in this template, and the other can be found [[here|Job]]
 
 :: Job [Job]
-<<nobr>><<if $bossHappiness > 0>><</nobr>>
+<<if $bossHappiness > 0>>
 Today's job is to build a $job
 Will You:
 [[Carry out the job by destroying the nearby forest|BuildJob]]
@@ -14,12 +14,11 @@ Will You:
 [[Skip work for the day to plant trees and help the environment| Plant Trees]]
 <</if>>
 <</nobr>>
-<<nobr>>
 <<if $bossHappiness <= 0 >>
 Your boss is incredibly unhappy with your recent performance in your job, or lack there of so he decides to fire you
 [[Get fired| Fired]]
 <</if>>
-<</nobr>>
+
 
 :: BuildJob [Build]
 You decide to carry out the job without considering the environmental damage that will come from it.
@@ -30,7 +29,7 @@ You decide to favor the health of the environment and the animals by not buildin
 [[Carry on to the next day| $story]]
 
 :: Search For New Spot [Search]
-<<link `"Go to " + $story` `$story`>><</link>>
+<<link `"Carry on to the next day"` `$story`>><</link>>
 
 :: Plant Trees
 You decide to skip work for the day and instead go to plant trees in order to help the environment recover from the damage you have done, but at the cost of your boss getting very angry
@@ -42,6 +41,20 @@ You decide to skip work for the day and instead go to plant trees in order to he
 <</nobr>>
 
 :: Fired
+<<nobr>>
+Now that you have been fired, there are two options. You could decide to give up on this walk of life and value your 
+relationship with the animals while finding a new career, or you could begin work for a rival company that has already 
+sent you an offer, going back to the same type of work, but slightly disappointing the animal friends you've made along the way.
+<<set $bossHappiness to 50>>
+<</nobr>>
+[[Get new career | Ending]]
+[[Accept the rival offer and get back to work | Job]]
+
+:: Ending
+<<nobr>>
+You decided to end your career as a lead architect and instead choose to work as a zoologist, advocating for environmental 
+protection in order to keep your new friends safe.
+<</nobr>>
 
 :: Jimmy [Jimmy]
 <<nobr>>
