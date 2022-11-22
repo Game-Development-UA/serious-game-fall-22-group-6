@@ -33,13 +33,15 @@ Jimmy is a squirell that has been in this forest for generations. He is very wel
 Hey friend! I’m Jimmy. I’ve been living in these trees my entire life and now I’ve got kids who can do the same. I hope to see you around more often.
 <</if>>
 <<if $jimmyVisits == 1 and $animalHappiness > 70>>
-
+While walking to your car after being yelled at by your boss, you see Jimmy waiting fo you in the parking garage.
 "Thank you for helping us out. It means a lot."
 <</if>>
 <<if $jimmyVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+While spending some time looking at the petential job sight you hear Jimmy talking to you from a nearby tree.
 "Those machines look mean. You won’t let them hurt us, will you?"
 <</if>>
 <<if $jimmyVisits == 1 and  $animalHappiness < 30>>
+
 "Why would you this? I thought that we were friends."
 <</if>>
 <<if $jimmyVisits == 2 and $animalHappiness > 70>>
