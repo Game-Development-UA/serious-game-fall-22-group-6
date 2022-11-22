@@ -1,5 +1,12 @@
 :: Start
-This is the first passage in your game with just one variable called animalHappiness that has a value of $animalHappiness.  There are two passages in this template, and the other can be found [[here|Job]]
+<<nobr>>
+You are a freshly hired lead architect working for a mega corporation that builds all sorts of different buildings. 
+Your job gives you the ability to decide whether or not you want to build the assignemnt for the day. As a child, you 
+learned that you have the ability to talk to animals and build friendships with them even if the animal usually does not 
+interact well with humans. You will have to balance the safety and quality of life of the new friends you make during 
+the course of your job while also keeping your boss happy to not get fired.
+<</nobr>>
+[[Go to work for your first day| Job]]
 
 :: Job [Job]
 <<if $bossHappiness > 0>>
