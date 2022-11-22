@@ -24,3 +24,43 @@
 “I see everything that goes on in this forest, and I see what you’re up to”
 13.	Gene Doe
 “The grass here is so delicious. There’s enough for my kids to live healthy happy lives”
+
+
+:: Jimmy [Jimmy]
+<<nobr>>
+<<if $jimmyVisits == 0>> 
+Introduction. Hey friend! I’m Jimmy. I’ve been living in these trees my entire life and now I’ve got kids who can do the same. I hope to see you around more often.
+<</if>>
+<<if $jimmyVisits == 1 and $animalHappiness > 70>>
+positive story. Thank you for helping us out. It means a lot.
+<</if>>
+<<if $jimmyVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story. Those machines look mean. You won’t let them hurt us, will you?
+<</if>>
+<<if $jimmyVisits == 1 and  $animalHappiness < 30>>
+negative story. Why would you this? I thought that we were friends.
+<</if>>
+<<if $jimmyVisits == 2 and $animalHappiness > 70>>
+positive story 2. Thanks to you my kids will grow up and live a long life.
+<</if>>
+<<if $jimmyVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story 2. I found a whole bunch of nuts this year and I’m really excited to eat them in the winter.
+<</if>>
+<<if $jimmyVisits == 2 and  $animalHappiness < 30>>
+negative story 2. I thought that you were different than the rest of them, but you’re just another evil human.
+<</if>>
+<<if $jimmyVisits == 3 and $animalHappiness > 70>>
+positive story 3. I knew that there were good in humans, you’ve restored my faith.
+<</if>>
+<<if $jimmyVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story 3. Don’t think that I trust you, I’ve got my eye on you.
+<</if>>
+<<if $jimmyVisits == 3 and  $animalHappiness < 30>>
+negative story 3. There’s nothing left, I have nothing and it’s all your fault.
+<</if>>
+<<if $jimmyVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
+jimmy dies, you monster
+<<set $jimmyDies to 1>>
+<</if>>
+<</nobr>>
+[[Start work for the day| Job]]
