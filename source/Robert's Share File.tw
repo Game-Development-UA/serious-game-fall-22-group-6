@@ -74,3 +74,53 @@ jimmy dies, you monster
 <</if>>
 <</nobr>>
 [[Start work for the day| Job]]
+
+
+
+::Tabitha [tabitha]
+<<nobr>>
+<<if $tabithaVisits == 0>> 
+Introduction
+Tabitha is a badger and is a well-respected guardian of the forest. She strikes fear into the hearts of those that threaten the forest.
+“I don’t trust any human and that includes you. You need to leave”
+<</if>>
+<<if $tabithaVisits == 1 and $animalHappiness > 70>>
+Tabitha approaches you, she wants to talk to you
+“I still don’t trust you but I guess you’re not all bad.”
+<<if $tabithaVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+As you’re walking Tabitha cuts you off.
+ “Just stay out of my way.”
+<</if>>
+<<if $tabithaVisits == 1 and  $animalHappiness < 30>>
+With a heavy heart, Tabitha approaches you
+“I’m not even surprised. Thanks for being awful”
+<</if>>
+<<if $tabithaVisits == 2 and $animalHappiness > 70>>
+Tabitha wants to talk but she’s keeping her distance
+“Thank you for what you’ve done but don’t think that I trust you”
+<</if>>
+<<if $tabithaVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+Tabitha notices you and says something as she’s walking away
+“Leave before I have to make you”
+<</if>>
+<<if $tabithaVisits == 2 and  $animalHappiness < 30>>
+While you feel proud of your accomplishment at work, others like Tabitha feel differently
+“I hope you’re ready for all of this to fall apart because I won’t rest until your project is destroyed”
+<</if>>
+<<if $tabithaVisits == 3 and $animalHappiness > 70>>
+As you head to your car you hear Tabitha calling for you
+”I think that I might have been wrong about you. Thank you”
+<</if>>
+<<if $tabithaVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+Tabitha finds you on your way into the office. She wants to talk
+“I’m going to do everything I can to stop this from happening, so don’t get in my way”
+<</if>>
+<<if $tabithaVisits == 3 and  $animalHappiness < 30>>
+Tabitha finds you while you’re watching the construction team work
+“I hope that you’re happy. Everyone of my friends just lost their homes”
+<</if>>
+<<if $tabithaVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
+Tabitha dies, you monster
+<<set $tabithaDies to 1>>
+<</if>>
+<</nobr>>
