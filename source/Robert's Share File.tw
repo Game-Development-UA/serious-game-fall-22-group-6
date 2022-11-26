@@ -41,25 +41,31 @@ While spending some time looking at the petential job sight you hear Jimmy talki
 "Those machines look mean. You won’t let them hurt us, will you?"
 <</if>>
 <<if $jimmyVisits == 1 and  $animalHappiness < 30>>
-
+While watching the construciton crew go to worrk, you see Jimmy with a sad look on his face.
 "Why would you this? I thought that we were friends."
 <</if>>
 <<if $jimmyVisits == 2 and $animalHappiness > 70>>
+As you start to feel as though it was all for nothing, Jimmy pays you a visit.
 "Thanks to you my kids will grow up and live a long life."
 <</if>>
 <<if $jimmyVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+Jimmy Finds you and starts bragging about some food that he's found
 "I found a whole bunch of nuts this year and I’m really excited to eat them in the winter."
 <</if>>
 <<if $jimmyVisits == 2 and  $animalHappiness < 30>>
+With a heavy heart Jimmy aproaches you to start scolding you.
 "I thought that you were different than the rest of them, but you’re just another evil human."
 <</if>>
 <<if $jimmyVisits == 3 and $animalHappiness > 70>>
+You feel Jimmy as he crawls up to stand on your shoulder
 "I knew that there were good in humans, you’ve restored my faith."
 <</if>>
 <<if $jimmyVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+Before leaving you see Jimmy. Looks like he wants to talk.
 "Don’t think that I trust you, I’ve got my eye on you."
 <</if>>
 <<if $jimmyVisits == 3 and  $animalHappiness < 30>>
+Before you can even see him, you hear Jimmy's voice.
 "There’s nothing left, I have nothing and it’s all your fault."
 <</if>>
 <<if $jimmyVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
