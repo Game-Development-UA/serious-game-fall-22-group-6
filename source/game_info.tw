@@ -16,8 +16,12 @@ My Twine Game
 <<set $bossHappiness to 0>>
 <<set $jimmyVisits to 0>>
 <<set $jimmyDies to 0>>
+<<set $tabithaVisits to 0>>
+<<set $tabithaDies to 0>>
+<<set $edwinVisits to 0>>
+<<set $edwinDies to 0>>
 <<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House"]>>
-<<set $storyList = ["Jimmy", "AnimalTwo"]>>
+<<set $storyList = ["Jimmy", "Edwin", "Tabitha"]>>
 
 :: PassageHeader
 <<nobr>>
@@ -70,5 +74,16 @@ area that works for both was found, but not as good as original area
 $storyList.delete("Jimmy")
 <</if>>
 <</if>>
-
+<<if tags().includes("Tabitha")>>
+<<set $tabithaVisits to $tabithaVisits + 1>>
+<<if $tabithaDies == 1>>
+$storyList.delete("Tabitha")
+<</if>>
+<</if>>
+<<if tags().includes("Edwin")>>
+<<set $edwinVisits to $edwinVisits + 1>>
+<<if $edwinDies == 1>>
+$storyList.delete("Edwin")
+<</if>>
+<</if>>
 
