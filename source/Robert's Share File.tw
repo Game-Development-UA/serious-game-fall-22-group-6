@@ -77,7 +77,7 @@ jimmy dies, you monster
 
 
 
-::Tabitha [tabitha]
+:: Tabitha [Tabitha]
 <<nobr>>
 <<if $tabithaVisits == 0>> 
 Introduction
@@ -87,6 +87,7 @@ Tabitha is a badger and is a well-respected guardian of the forest. She strikes 
 <<if $tabithaVisits == 1 and $animalHappiness > 70>>
 Tabitha approaches you, she wants to talk to you
 “I still don’t trust you but I guess you’re not all bad.”
+<</if>>
 <<if $tabithaVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
 As you’re walking Tabitha cuts you off.
  “Just stay out of my way.”
@@ -127,7 +128,7 @@ Tabitha dies, you monster
 
 
 
-:: Edwin [edwin]
+:: Edwin [Edwin]
 <<nobr>>
 <<if $edwinVisits == 0>> 
 As you’re taking a walk you notice a fox trying to get your attention
@@ -136,6 +137,7 @@ As you’re taking a walk you notice a fox trying to get your attention
 <<if $ edwinVisits == 1 and $animalHappiness > 70>>
 You see Edwin walking around the back of your house
 “I heard that you stood up for us today. Thank you”
+<</if>>
 <<if $ edwinVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
 You leave work to see that Edwin was waiting for you
 “If you really care about us you’ll cut all ties with your job.”
@@ -177,5 +179,3 @@ Edwin dies, you monster
 <</nobr>>
 [[Start work for the day| Job]]
 
-:: AnimalTwo
-[[Start work for the day| Job]]
