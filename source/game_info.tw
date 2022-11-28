@@ -11,9 +11,9 @@ My Twine Game
 
 :: StoryInit
 /* start with 50 happiness for both job and animals*/
-<<set $environmentHealth to 80>>
-<<set $animalHappiness to 50>>
-<<set $bossHappiness to 0>>
+<<set $environmentHealth to 0>>
+<<set $animalHappiness to 0>>
+<<set $bossHappiness to 50>>
 <<set $jimmyVisits to 0>>
 <<set $jimmyDies to 0>>
 <<set $tabithaVisits to 0>>

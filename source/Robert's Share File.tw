@@ -80,7 +80,6 @@ jimmy dies, you monster
 :: Tabitha [Tabitha]
 <<nobr>>
 <<if $tabithaVisits == 0>> 
-Introduction
 Tabitha is a badger and is a well-respected guardian of the forest. She strikes fear into the hearts of those that threaten the forest.
 “I don’t trust any human and that includes you. You need to leave”
 <</if>>
@@ -125,6 +124,8 @@ Tabitha dies, you monster
 <<set $tabithaDies to 1>>
 <</if>>
 <</nobr>>
+[[Start work for the day| Job]]
+
 
 
 
