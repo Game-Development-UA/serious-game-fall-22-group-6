@@ -37,7 +37,7 @@ Your boss is incredibly unhappy with your recent performance in your job, or lac
 <</nobr>>
 <<nobr>>
 <<if $consecutiveDays > 4>>
-After having worked many days in a row, you are able to take a day off                                                  
+After having worked many days in a row, you are able to take a day off. However, this will upset your boss even more than if you decide to not build the job for the day.                                                  
 [[Take the day off| Day Off]]
 <</if>>
 <</nobr>>
@@ -88,7 +88,6 @@ All the animals that at one point tried to be your friend are now either all dea
 :: Day Off [Break]
 You decided to take today off from work. Will you:
 [[Go on a walk, but bring your trusty pack of cigaretts| Smoke]]
-
 <<nobr>>
 <<if $solarInstalled == 0>>
 [[Finish installing solar panels on your house| Solar]]

@@ -119,5 +119,5 @@ You managed to find a new area to build that is both good for business and the e
 <</if>>
 <<if tags().includes("Break")>>
 <<set $consecutiveDays to 0>>
-<<set $bossHappiness to $bossHappiness - 2>>
+<<set $bossHappiness to $bossHappiness - 10>>
 <</if>>
