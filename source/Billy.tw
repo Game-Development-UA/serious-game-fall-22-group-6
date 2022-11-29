@@ -83,37 +83,47 @@ ANIMAL 1
 :: Hopper [Hopper]
 <<nobr>>
 <<if $HopperVisits == 0>> 
-introduction. Howdy stranger! Its nice to meet you. My name is Hopper! Welcome to our home, we've lived here for years, which is why this forest means so much to my family and I. 
+On your way to work for the day, you see a rabbit approaching, seeming like they want to talk to you.
+ "Howdy stranger! Its nice to meet you. My name is Hopper! Welcome to our home, we've lived here for years, which is why this forest means so much to my family and I." 
 <</if>>
 <<if $HopperVisits == 1 and $animalHappiness > 70>>
-positive story. Thank you so much stranger! We are forever grateful to you.
+As you leave for the day, Hopper comes up to you, looking happy. 
+"Thank you so much stranger! We are forever grateful to you."
 <</if>>
 <<if $HopperVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-neutral story. I bet your job must be very important, but surely you won't sacrifice our home for some dumb building, right?
+Before you are able to start working for the day, you hear Hopper calling out to you. 
+"I bet your job must be very important, but surely you won't sacrifice our home for some dumb building, right?"
 <</if>>
 <<if $HopperVisits == 1 and  $animalHappiness < 30>>
-negative story. I can't believe you! How could you do this to us, to my family?!
+Out of the corner of your eye you spot Hopper coming up to you, looking disappointed. 
+"I can't believe you! How could you do this to us, to my family?!"
 <</if>>
 <<if $HopperVisits == 2 and $animalHappiness > 70>>
-positive story 2. We appreciate you sparing our home. How could we ever repay you?
+While leaving, Hopper hops up to you with a very pleased expression. 
+"We appreciate you sparing our home. How could we ever repay you?"
 <</if>>
 <<if $HopperVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-neutral story 2. I'm confident you won't let us be hurt for the sake of just your job. You'd have to be real low to do that.
+Today is started by Hopper meeting you at the job site, acting in a way that shows he's been waiting for you to arrive. 
+"I'm confident you won't let us be hurt for the sake of just your job. You'd have to be real low to do that."
 <</if>>
 <<if $HopperVisits == 2 and  $animalHappiness < 30>>
-negative story 2. Why did I think I could ever trust you...?
+Hopper very angrily hops over to you before you are able to get into your car to head home for the day. 
+"Why did I think I could ever trust you...?"
 <</if>>
 <<if $HopperVisits == 3 and $animalHappiness > 70>>
-positive story 3. I knew I could trust you! Thanks a ton!
+A very excited looking Hopper greets you as you get out of your car. 
+"I knew I could trust you! Thanks a ton!"
 <</if>>
 <<if $HopperVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-neutral story 3. I bet you'd like some time to think, please think about this carefully.
+Hopper looks a little distresed after your last decision, warning you about the potential dangers your job continues to put on him. 
+"I bet you'd like some time to think, please think about this carefully."
 <</if>>
 <<if $HopperVisits == 3 and  $animalHappiness < 30>>
-negative story 3. Where do you expect us to live now? You humans are disgusting and selfish creatures.
+After your most recent project, Hopper's home was destroyed. In a fit of rage he storms over to you.  
+"Where do you expect us to live now? You humans are disgusting and selfish creatures."
 <</if>>
 <<if $HopperVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
-Hopper dies, you monster
+Hopper died, you monster
 <<set $HopperDies to 1>>
 <</if>>
 <</nobr>>
@@ -124,37 +134,47 @@ ANIMAL 2
 :: Sally [Sally]
 <<nobr>>
 <<if $SallyVisits == 0>> 
-introduction. Hello there, I don't think I have seen you around here before. Welcome to our park, it's not the biggest park in the world, but its where a lot of us critters call home. Allow me to introduce myself, my name is Sally, it's nice to meet you.
+Before starting today's work a small chipmunk scuttles over to you and decides to introduce themself.  
+"Hello there, I don't think I have seen you around here before. Welcome to our park, it's not the biggest park in the world, but its where a lot of us critters call home. Allow me to introduce myself, my name is Sally, it's nice to meet you."
 <</if>>
 <<if $SallyVisits == 1 and $animalHappiness > 70>>
-positive story. I can't believe it! You're willing to save our park?? Thank you so much! 
+Sally finds you after you finished work for the day with a hopeful look on her face. 
+"I can't believe it! You're willing to save our park?? Thank you so much!" 
 <</if>>
 <<if $SallyVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-neutral story. Give this decision some thought, a lot is riding on this.
+After hearing your boss tell you what your next assignemnt will be, Sally comes over to you with something to say. 
+"Give this decision some thought, a lot is riding on this."
 <</if>>
 <<if $SallyVisits == 1 and  $animalHappiness < 30>>
-negative story. You low-down dirtbag. I hope you're happy with what you did.
+As you are about to get into you car to leave, you see Sally sprinting towards you in a very angry manner. 
+"You low-down dirtbag. I hope you're happy with what you did."
 <</if>>
 <<if $SallyVisits == 2 and $animalHappiness > 70>>
-positive story 2. You really mean it? That's so sweet of you!
+You see Sally in the morning before you start work and tell her about how hard you have been trying to keep the environment safe while also maintaining your job. 
+"You really mean it? That's so sweet of you!"
 <</if>>
 <<if $SallyVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-neutral story 2. Please choose wisely. A lot of animals are counting on you.
+Sally finds you again before you start working, and reminds you of how much your job impacts them. 
+"Please choose wisely. A lot of animals are counting on you."
 <</if>>
 <<if $SallyVisits == 2 and  $animalHappiness < 30>>
-negative story 2. You tore this entire park down, just for one stupid building?! How could you do such a thing?!
+After your most recent job, Sally is very angry at you due to her home nearly being destroyed. 
+"You tore this entire park down, just for one stupid building?! How could you do such a thing?!"
 <</if>>
 <<if $SallyVisits == 3 and $animalHappiness > 70>>
-positive story 3. We owe our lives to you. Thank you so much for sparing us. 
+Sally runs over to you after you finish work for the day, looking far more excited and energetic than usual. 
+"We owe our lives to you. Thank you so much for sparing us."
 <</if>>
 <<if $SallyVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-neutral story 3. I understand. This kind of decision needs further thinking. Just please make the right choice. 
+You and Sally have a conversation about how hard it is to balance the health of the environment while also keeping your boss satisfied with your work. 
+"I understand. This kind of decision needs further thinking. Just please make the right choice."
 <</if>>
 <<if $SallyVisits == 3 and  $animalHappiness < 30>>
-negative story 3. Typical human filth. You take away from others, just to benefit yourselves. You disgust me.
+Due to destroying a large amount of the nearby habitats, Sally storms over to you in a fit of rage. 
+"Typical human filth. You take away from others, just to benefit yourselves. You disgust me."
 <</if>>
 <<if $SallyVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
-Sally dies, you monster
+Sally died, you monster
 <<set $SallyDies to 1>>
 <</if>>
 <</nobr>>
@@ -165,37 +185,47 @@ ANIMAL 3
 :: Elliott [Elliott]
 <<nobr>>
 <<if $ElliottVisits == 0>> 
-introduction. You don't look like you're from around here. I don't blame you for stopping by though. Mountain Ranges like this one are usually so beautiful. How rude of me, I never even introduced myself. The name's Elliott! Feel free to explore and chill out.
+As you are walking over to the job site from your car, you spot a deer out in the field. Surprisingly, it comes over to you and starts introducing itself. 
+"You don't look like you're from around here. I don't blame you for stopping by though. Mountain Ranges like this one are usually so beautiful. How rude of me, I never even introduced myself. The name's Elliott! Feel free to explore and chill out."
 <</if>>
 <<if $ElliottVisits == 1 and $animalHappiness > 70>>
-positive story. Thanks a lot dude! You made a lot of animals here happy!
+Elliot finds you after work and starts up a conversation, eventually getting onto the topic of your recent job performance. 
+"Thanks a lot dude! You made a lot of animals here happy!"
 <</if>>
 <<if $ElliottVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-neutral story. Oh, I totally get it, you need to sleep this off? Be sure to make your decision soon.
+After work is over for the day, you remember what Elliot said to you when you told him during your lunch break that you ere struggling with what choice to make for the day. 
+"Oh, I totally get it, you need to sleep this off? Be sure to make your decision soon."
 <</if>>
 <<if $ElliottVisits == 1 and  $animalHappiness < 30>>
-negative story. I thought we could trust you, and you do us dirty like that?
+Elliot runs towards you in the morning, almost crashing into you due to being blinded by anger. 
+"I thought we could trust you, and you do us dirty like that?"
 <</if>>
 <<if $ElliottVisits == 2 and $animalHappiness > 70>>
-positive story 2. I knew we could count on you!
+Elliot thanks you after your recent decision to help the environment. 
+"I knew we could count on you!"
 <</if>>
 <<if $ElliottVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-neutral story 2. Please think about what you're doing here. If you choose to wipe out this land, you're forcing a lot of critters to lose their homes.
+While taking an afternoon stroll, you see Elliot and walk over to talk to him. 
+"Please think about what you're doing here. If you choose to wipe out this land, you're forcing a lot of critters to lose their homes."
 <</if>>
 <<if $ElliottVisits == 2 and  $animalHappiness < 30>>
-negative story 2. Don't ever show your face around here again. I lost all respect for you.
+You try to start a conversation with Elliot during your break, but he turns away quickly. 
+"Don't ever show your face around here again. I lost all respect for you."
 <</if>>
 <<if $ElliottVisits == 3 and $animalHappiness > 70>>
-positive story 3. We owe you big time! Thank you so much for sparing our land.
+While talking to Elliot and some other animals, he mentions how thankful he is for you not destroying his home. 
+"We owe you big time! Thank you so much for sparing our land."
 <</if>>
 <<if $ElliottVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-neutral story 3. We're counting on you, don't let us down.
+Elliot catches you off guard by walking up behind you to tell you a very simple message. 
+"We're counting on you, don't let us down."
 <</if>>
 <<if $ElliottVisits == 3 and  $animalHappiness < 30>>
-negative story 3. Who do you think you are to just wipe out our homes like that? Another day, another human monster.
+Despite Elliot turning you away last time, you try to talk to him once again. 
+"Who do you think you are to just wipe out our homes like that? Another day, another human monster."
 <</if>>
 <<if $ElliottVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
-Elliott dies, you monster
+Elliott died, you monster
 <<set $ElliottDies to 1>>
 <</if>>
 <</nobr>>

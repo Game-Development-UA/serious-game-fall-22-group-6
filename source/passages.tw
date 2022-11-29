@@ -10,19 +10,27 @@ the course of your job while also keeping your boss happy to not get fired.
 
 :: Job [Job]
 <<if $bossHappiness > 0>>
+<<if $environmentHealth > 0>>
 Today's job is to build a $job
 Will You:
 [[Carry out the job by destroying the nearby forest|BuildJob]]
 [[Refuse to build today's job|DenyJob]]
 [[Or search for a different location to build today's job|Search For New Spot]]
 <</if>>
+<</if>>
 <<nobr>>
 <<if $environmentHealth <  20>>
 [[Skip work for the day to plant trees and help the environment| Plant Trees]]
 <</if>>
 <</nobr>>
+<<nobr>>
+<<if $environmentHealth <=  0>>
+Somehow, you have managed to completely destroy the environment and now your job no longer needs you
+[[End your career| Bad End]]
+<</if>>
+<</nobr>>
 <<if $bossHappiness <= 0 >>
-Your boss is incredibly unhappy with your recent performance in your job, or lack there of so he decides to fire you
+Your boss is incredibly unhappy with your recent performance in your job, or lack there of, so he decides to fire you
 [[Get fired| Fired]]
 <</if>>
 
@@ -54,11 +62,17 @@ relationship with the animals while finding a new career, or you could begin wor
 sent you an offer, going back to the same type of work, but slightly disappointing the animal friends you've made along the way.
 <<set $bossHappiness to 50>>
 <</nobr>>
-[[Get new career | Ending]]
+[[Get a new career | Retire]]
 [[Accept the rival offer and get back to work | Job]]
 
-:: Ending
+:: Retire
 <<nobr>>
 You decided to end your career as a lead architect and instead choose to work as a zoologist, advocating for environmental 
 protection in order to keep your new friends safe.
+<</nobr>>
+
+:: Bad End 
+<<nobr>>
+As you walk away from the construction site for one final time, you realize that the great forest that was once there is no longer standing anymore. 
+All the animals that at one point tried to be your friend are now either all dead or have moved on to a new home, away from the monster they hoped you would not be.
 <</nobr>>
