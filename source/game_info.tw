@@ -34,6 +34,7 @@ Habitual Habitat Destroyer
 :: PassageHeader
 <<nobr>>
 <<if tags().includes("Job")>>
+<<set $consecutiveDays to $consecutiveDays + 1>>
 <<set $job to $_jobs.random()>>
 <</if>>
 <<if tags().includes("Build")>>
@@ -76,7 +77,6 @@ You managed to find a new area to build that is both good for business and the e
 <<set $animalHappiness to $animalHappiness + 3>>
 <<set $bossHappiness to $bossHappiness + 3>>
 <</if>>
-<<set $consecutiveDays to $consecutiveDays + 1>>
 <</if>>
 <</nobr>>
 

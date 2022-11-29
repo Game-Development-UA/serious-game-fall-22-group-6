@@ -36,7 +36,7 @@ Your boss is incredibly unhappy with your recent performance in your job, or lac
 <</if>>
 <</nobr>>
 <<nobr>>
-<<if $consecutiveDays >= 5>>
+<<if $consecutiveDays > 4>>
 After having worked many days in a row, you are able to take a day off                                                  
 [[Take the day off| Day Off]]
 <</if>>
