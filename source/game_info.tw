@@ -14,6 +14,8 @@ Habitual Habitat Destroyer
 <<set $environmentHealth to 100>>
 <<set $animalHappiness to 50>>
 <<set $bossHappiness to 50>>
+<<set $consecutiveDays to 0>>
+<<set $solarInstalled to 0>>
 <<set $jimmyVisits to 0>>
 <<set $jimmyDies to 0>>
 <<set $tabithaVisits to 0>>
@@ -35,45 +37,46 @@ Habitual Habitat Destroyer
 <<set $job to $_jobs.random()>>
 <</if>>
 <<if tags().includes("Build")>>
-<<set $animalHappiness to $animalHappiness - 10>>
-<<set $bossHappiness to $bossHappiness + 10>>
+<<set $animalHappiness to $animalHappiness - 5>>
+<<set $bossHappiness to $bossHappiness + 5>>
 <<set $environmentHealth to $environmentHealth - 10>>
 <<set $story to $storyList.random()>>
 <</if>>
 <<if tags().includes("Deny")>>
-<<set $animalHappiness to $animalHappiness + 10>>
-<<set $bossHappiness to $bossHappiness - 10>>
+<<set $animalHappiness to $animalHappiness + 5>>
+<<set $bossHappiness to $bossHappiness - 5>>
 <<set $story to $storyList.random()>>
 <</if>>
 <<if tags().includes("Search")>>
 <<set $index to either(1,2,3,4)>>
 <<set $story to $storyList.random()>>
 <<if $index is 1>>
-You were unable to locate a new spot to build the $job and had to build it in the original location
-
-<<set $animalHappiness to $animalHappiness - 10>>
-<<set $bossHappiness to $bossHappiness + 10>>
-<<set $environmentHealth to $environmentHealth - 10>>
-<</if>>
-<<if $index is 2>>
-You find an area that is slightly better than the original spot, but it still is harmful to the environment
+You were unable to locate a new spot to build the $job and had to build it in the original location                 
 
 <<set $animalHappiness to $animalHappiness - 5>>
 <<set $bossHappiness to $bossHappiness + 5>>
+<<set $environmentHealth to $environmentHealth - 10>>
+<</if>>
+<<if $index is 2>>
+You find an area that is slightly better than the original spot, but it still is harmful to the environment                 
+
+<<set $animalHappiness to $animalHappiness - 3>>
+<<set $bossHappiness to $bossHappiness + 3>>
 <<set $environmentHealth to $environmentHealth - 5>>
 <</if>>
 <<if $index is 3>>
-You found an area that is much better for the environment, but harmful for business
+You found an area that is much better for the environment, but harmful for business                 
 
-<<set $animalHappiness to $animalHappiness + 5>>
-<<set $bossHappiness to $bossHappiness - 5>>
+<<set $animalHappiness to $animalHappiness + 3>>
+<<set $bossHappiness to $bossHappiness - 3>>
 <</if>>
 <<if $index is 4>>
-You managed to find a new area to build that is both good for business and the environment
+You managed to find a new area to build that is both good for business and the environment                  
 
-<<set $animalHappiness to $animalHappiness + 5>>
-<<set $bossHappiness to $bossHappiness + 5>>
+<<set $animalHappiness to $animalHappiness + 3>>
+<<set $bossHappiness to $bossHappiness + 3>>
 <</if>>
+<<set $consecutiveDays to $consecutiveDays + 1>>
 <</if>>
 <</nobr>>
 
@@ -114,4 +117,7 @@ You managed to find a new area to build that is both good for business and the e
 <<set $storyList to $storyList.delete("Hopper")>>
 <</if>>
 <</if>>
-
+<<if tags().includes("Break")>>
+<<set $consecutiveDays to 0>>
+<<set $bossHappiness to $bossHappiness - 2>>
+<</if>>

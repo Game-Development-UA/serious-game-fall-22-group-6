@@ -29,11 +29,18 @@ Somehow, you have managed to completely destroy the environment and now your job
 [[End your career| Bad End]]
 <</if>>
 <</nobr>>
+<<nobr>>
 <<if $bossHappiness <= 0 >>
 Your boss is incredibly unhappy with your recent performance in your job, or lack there of, so he decides to fire you
 [[Get fired| Fired]]
 <</if>>
-
+<</nobr>>
+<<nobr>>
+<<if $consecutiveDays >= 5>>
+After having worked many days in a row, you are able to take a day off                                                  
+[[Take the day off| Day Off]]
+<</if>>
+<</nobr>>
 
 :: BuildJob [Build]
 You decide to carry out the job without considering the environmental damage that will come from it.
@@ -44,7 +51,7 @@ You decide to favor the health of the environment and the animals by not buildin
 [[Carry on to the next day| $story]]
 
 :: Search For New Spot [Search]
- 
+
 <<link `"Carry on to the next day"` `$story`>><</link>>
 
 :: Plant Trees
@@ -77,3 +84,28 @@ protection in order to keep your new friends safe.
 As you walk away from the construction site for one final time, you realize that the great forest that was once there is no longer standing anymore. 
 All the animals that at one point tried to be your friend are now either all dead or have moved on to a new home, away from the monster they hoped you would not be.
 <</nobr>>
+
+:: Day Off [Break]
+You decided to take today off from work. Will you:
+[[Go on a walk, but bring your trusty pack of cigaretts| Smoke]]
+
+<<nobr>>
+<<if $solarInstalled = 0>>
+[[Finish installing solar panels on your house| Solar]]
+<</if>>
+<</nobr>>
+[[Spend all day relaxing| Relax]]
+
+:: Smoke
+While going on your afternoon walk, you decide it would not only be a good idea to start smoking, but to also drop the cigarette butt behind you without thinking. Don't you know anything about how bad that is for the environment?
+<<set $enivronmentHealth to $enivronmentHealth - 1>>
+[[Go to work tomorrow| Job]]
+
+:: Solar
+You decided to work on installing solar panels on your house for the benefit of the environment
+<<set $enivronmentHealth to $enivronmentHealth + 2>>
+[[Go to work tomorrow| Job]]
+
+:: Relax
+After taking the day off, you decided to spend the whole time relaxing around your house, not worrying about the environment, your boss, or anything related to work
+[[Go to work tomorrow| Job]]
