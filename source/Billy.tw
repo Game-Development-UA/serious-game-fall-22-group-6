@@ -78,7 +78,6 @@ Location: The Caribbean National Forest
 
 
 Passage.tw Copy and Paste: (in case it doesn’t save on Visual Studio Code)
-ANIMAL 1
 
 :: Hopper [Hopper]
 <<nobr>>
@@ -129,7 +128,6 @@ Hopper died, you monster
 <</nobr>>
 [[Start work for the day| Job]]
 
-ANIMAL 2
 
 :: Sally [Sally]
 <<nobr>>
@@ -179,8 +177,6 @@ Sally died, you monster
 <</if>>
 <</nobr>>
 [[Start work for the day| Job]]
-
-ANIMAL 3
 
 :: Elliott [Elliott]
 <<nobr>>

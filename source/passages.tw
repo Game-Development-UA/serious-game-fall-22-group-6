@@ -44,6 +44,7 @@ You decide to favor the health of the environment and the animals by not buildin
 [[Carry on to the next day| $story]]
 
 :: Search For New Spot [Search]
+ 
 <<link `"Carry on to the next day"` `$story`>><</link>>
 
 :: Plant Trees
