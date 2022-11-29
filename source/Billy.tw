@@ -74,3 +74,128 @@ Animal/Type: Coquí Frog
 Name: Hoppy
 Gender: Male
 Location: The Caribbean National Forest
+
+
+
+Passage.tw Copy and Paste: (in case it doesn’t save on Visual Studio Code)
+ANIMAL 1
+
+:: Hopper [Hopper]
+<<nobr>>
+<<if $HopperVisits == 0>> 
+introduction. Howdy stranger! Its nice to meet you. My name is Hopper! Welcome to our home, we've lived here for years, which is why this forest means so much to my family and I. 
+<</if>>
+<<if $HopperVisits == 1 and $animalHappiness > 70>>
+positive story. Thank you so much stranger! We are forever grateful to you.
+<</if>>
+<<if $HopperVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story. I bet your job must be very important, but surely you won't sacrifice our home for some dumb building, right?
+<</if>>
+<<if $HopperVisits == 1 and  $animalHappiness < 30>>
+negative story. I can't believe you! How could you do this to us, to my family?!
+<</if>>
+<<if $HopperVisits == 2 and $animalHappiness > 70>>
+positive story 2. We appreciate you sparing our home. How could we ever repay you?
+<</if>>
+<<if $HopperVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story 2. I'm confident you won't let us be hurt for the sake of just your job. You'd have to be real low to do that.
+<</if>>
+<<if $HopperVisits == 2 and  $animalHappiness < 30>>
+negative story 2. Why did I think I could ever trust you...?
+<</if>>
+<<if $HopperVisits == 3 and $animalHappiness > 70>>
+positive story 3. I knew I could trust you! Thanks a ton!
+<</if>>
+<<if $HopperVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story 3. I bet you'd like some time to think, please think about this carefully.
+<</if>>
+<<if $HopperVisits == 3 and  $animalHappiness < 30>>
+negative story 3. Where do you expect us to live now? You humans are disgusting and selfish creatures.
+<</if>>
+<<if $HopperVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
+Hopper dies, you monster
+<<set $HopperDies to 1>>
+<</if>>
+<</nobr>>
+
+
+ANIMAL 2
+
+:: Sally [Sally]
+<<nobr>>
+<<if $SallyVisits == 0>> 
+introduction. Hello there, I don't think I have seen you around here before. Welcome to our park, it's not the biggest park in the world, but its where a lot of us critters call home. Allow me to introduce myself, my name is Sally, it's nice to meet you.
+<</if>>
+<<if $SallyVisits == 1 and $animalHappiness > 70>>
+positive story. I can't believe it! You're willing to save our park?? Thank you so much! 
+<</if>>
+<<if $SallyVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story. Give this decision some thought, a lot is riding on this.
+<</if>>
+<<if $SallyVisits == 1 and  $animalHappiness < 30>>
+negative story. You low-down dirtbag. I hope you're happy with what you did.
+<</if>>
+<<if $SallyVisits == 2 and $animalHappiness > 70>>
+positive story 2. You really mean it? That's so sweet of you!
+<</if>>
+<<if $SallyVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story 2. Please choose wisely. A lot of animals are counting on you.
+<</if>>
+<<if $SallyVisits == 2 and  $animalHappiness < 30>>
+negative story 2. You tore this entire park down, just for one stupid building?! How could you do such a thing?!
+<</if>>
+<<if $SallyVisits == 3 and $animalHappiness > 70>>
+positive story 3. We owe our lives to you. Thank you so much for sparing us. 
+<</if>>
+<<if $SallyVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story 3. I understand. This kind of decision needs further thinking. Just please make the right choice. 
+<</if>>
+<<if $SallyVisits == 3 and  $animalHappiness < 30>>
+negative story 3. Typical human filth. You take away from others, just to benefit yourselves. You disgust me.
+<</if>>
+<<if $SallyVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
+Sally dies, you monster
+<<set $SallyDies to 1>>
+<</if>>
+<</nobr>>
+
+
+ANIMAL 3
+
+:: Elliott [Elliott]
+<<nobr>>
+<<if $ElliottVisits == 0>> 
+introduction. You don't look like you're from around here. I don't blame you for stopping by though. Mountain Ranges like this one are usually so beautiful. How rude of me, I never even introduced myself. The name's Elliott! Feel free to explore and chill out.
+<</if>>
+<<if $ElliottVisits == 1 and $animalHappiness > 70>>
+positive story. Thanks a lot dude! You made a lot of animals here happy!
+<</if>>
+<<if $ElliottVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story. Oh, I totally get it, you need to sleep this off? Be sure to make your decision soon.
+<</if>>
+<<if $ElliottVisits == 1 and  $animalHappiness < 30>>
+negative story. I thought we could trust you, and you do us dirty like that?
+<</if>>
+<<if $ElliottVisits == 2 and $animalHappiness > 70>>
+positive story 2. I knew we could count on you!
+<</if>>
+<<if $ElliottVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story 2. Please think about what you're doing here. If you choose to wipe out this land, you're forcing a lot of critters to lose their homes.
+<</if>>
+<<if $ElliottVisits == 2 and  $animalHappiness < 30>>
+negative story 2. Don't ever show your face around here again. I lost all respect for you.
+<</if>>
+<<if $ElliottVisits == 3 and $animalHappiness > 70>>
+positive story 3. We owe you big time! Thank you so much for sparing our land.
+<</if>>
+<<if $ElliottVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+neutral story 3. We're counting on you, don't let us down.
+<</if>>
+<<if $ElliottVisits == 3 and  $animalHappiness < 30>>
+negative story 3. Who do you think you are to just wipe out our homes like that? Another day, another human monster.
+<</if>>
+<<if $ElliottVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
+Elliott dies, you monster
+<<set $ElliottDies to 1>>
+<</if>>
+<</nobr>>
