@@ -189,39 +189,39 @@ As you are walking over to the job site from your car, you spot a deer out in th
 "You don't look like you're from around here. I don't blame you for stopping by though. Mountain Ranges like this one are usually so beautiful. How rude of me, I never even introduced myself. The name's Elliott! Feel free to explore and chill out."
 <</if>>
 <<if $ElliottVisits == 1 and $animalHappiness > 70>>
-Elliot finds you after work and starts up a conversation, eventually getting onto the topic of your recent job performance. 
+Elliott finds you after work and starts up a conversation, eventually getting onto the topic of your recent job performance. 
 "Thanks a lot dude! You made a lot of animals here happy!"
 <</if>>
 <<if $ElliottVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-After work is over for the day, you remember what Elliot said to you when you told him during your lunch break that you ere struggling with what choice to make for the day. 
+After work is over for the day, you remember what Elliott said to you when you told him during your lunch break that you ere struggling with what choice to make for the day. 
 "Oh, I totally get it, you need to sleep this off? Be sure to make your decision soon."
 <</if>>
 <<if $ElliottVisits == 1 and  $animalHappiness < 30>>
-Elliot runs towards you in the morning, almost crashing into you due to being blinded by anger. 
+Elliott runs towards you in the morning, almost crashing into you due to being blinded by anger. 
 "I thought we could trust you, and you do us dirty like that?"
 <</if>>
 <<if $ElliottVisits == 2 and $animalHappiness > 70>>
-Elliot thanks you after your recent decision to help the environment. 
+Elliott thanks you after your recent decision to help the environment. 
 "I knew we could count on you!"
 <</if>>
 <<if $ElliottVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-While taking an afternoon stroll, you see Elliot and walk over to talk to him. 
+While taking an afternoon stroll, you see Elliott and walk over to talk to him. 
 "Please think about what you're doing here. If you choose to wipe out this land, you're forcing a lot of critters to lose their homes."
 <</if>>
 <<if $ElliottVisits == 2 and  $animalHappiness < 30>>
-You try to start a conversation with Elliot during your break, but he turns away quickly. 
+You try to start a conversation with Elliott during your break, but he turns away quickly. 
 "Don't ever show your face around here again. I lost all respect for you."
 <</if>>
 <<if $ElliottVisits == 3 and $animalHappiness > 70>>
-While talking to Elliot and some other animals, he mentions how thankful he is for you not destroying his home. 
+While talking to Elliott and some other animals, he mentions how thankful he is for you not destroying his home. 
 "We owe you big time! Thank you so much for sparing our land."
 <</if>>
 <<if $ElliottVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
-Elliot catches you off guard by walking up behind you to tell you a very simple message. 
+Elliott catches you off guard by walking up behind you to tell you a very simple message. 
 "We're counting on you, don't let us down."
 <</if>>
 <<if $ElliottVisits == 3 and  $animalHappiness < 30>>
-Despite Elliot turning you away last time, you try to talk to him once again. 
+Despite Elliott turning you away last time, you try to talk to him once again. 
 "Who do you think you are to just wipe out our homes like that? Another day, another human monster."
 <</if>>
 <<if $ElliottVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>

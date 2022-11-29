@@ -27,7 +27,7 @@ Habitual Habitat Destroyer
 <<set $ElliottVisits to 0>>
 <<set $ElliotDies to 0>>
 <<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House"]>>
-<<set $storyList = ["Jimmy", "Edwin", "Tabitha", "Elliot", "Sally", "Hopper"]>>
+<<set $storyList = ["Jimmy", "Edwin", "Tabitha", "Elliott", "Sally", "Hopper"]>>
 
 :: PassageHeader
 <<nobr>>
@@ -50,23 +50,27 @@ Habitual Habitat Destroyer
 <<set $story to $storyList.random()>>
 <<if $index is 1>>
 You were unable to locate a new spot to build the $job and had to build it in the original location
+
 <<set $animalHappiness to $animalHappiness - 10>>
 <<set $bossHappiness to $bossHappiness + 10>>
 <<set $environmentHealth to $environmentHealth - 10>>
 <</if>>
 <<if $index is 2>>
 You find an area that is slightly better than the original spot, but it still is harmful to the environment
+
 <<set $animalHappiness to $animalHappiness - 5>>
 <<set $bossHappiness to $bossHappiness + 5>>
 <<set $environmentHealth to $environmentHealth - 5>>
 <</if>>
 <<if $index is 3>>
 You found an area that is much better for the environment, but harmful for business
+
 <<set $animalHappiness to $animalHappiness + 5>>
 <<set $bossHappiness to $bossHappiness - 5>>
 <</if>>
 <<if $index is 4>>
 You managed to find a new area to build that is both good for business and the environment
+
 <<set $animalHappiness to $animalHappiness + 5>>
 <<set $bossHappiness to $bossHappiness + 5>>
 <</if>>
@@ -92,10 +96,10 @@ You managed to find a new area to build that is both good for business and the e
 <<set $storyList to $storyList.delete("Edwin")>>
 <</if>>
 <</if>>
-<<if tags().includes("Elliot")>>
+<<if tags().includes("Elliott")>>
 <<set $ElliottVisits to $ElliottVisits + 1>>
 <<if $ElliotDies == 1>>
-<<set $storyList to $storyList.delete("Elliot")>>
+<<set $storyList to $storyList.delete("Elliott")>>
 <</if>>
 <</if>>
 <<if tags().includes("Sally")>>
