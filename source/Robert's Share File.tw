@@ -135,47 +135,47 @@ Tabitha dies, you monster
 As you’re taking a walk you notice a fox trying to get your attention
 “My name is Edwin. I see everything that goes on in this forest, and I see what you’re up to”
 <</if>>
-<<if $ edwinVisits == 1 and $animalHappiness > 70>>
+<<if $edwinVisits == 1 and $animalHappiness > 70>>
 You see Edwin walking around the back of your house
 “I heard that you stood up for us today. Thank you”
 <</if>>
-<<if $ edwinVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+<<if $edwinVisits == 1 and $animalHappiness <= 70 and $animalHappiness >= 30>>
 You leave work to see that Edwin was waiting for you
 “If you really care about us you’ll cut all ties with your job.”
 <</if>>
-<<if $ edwinVisits == 1 and  $animalHappiness < 30>>
+<<if $edwinVisits == 1 and  $animalHappiness < 30>>
 Edwin finds you after construction has started
 “I knew you couldn’t be trusted”
 <</if>>
-<<if $ edwinVisits == 2 and $animalHappiness > 70>>
+<<if $edwinVisits == 2 and $animalHappiness > 70>>
 As you get in your car you notice Edwin in the back seat
 “You’ve been doing some good for us. Keep it up. Can you drop me off at my house please?”
 <</if>>
-<<if $ edwinVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+<<if $edwinVisits == 2 and $animalHappiness <= 70 and $animalHappiness >= 30>>
 Edwin finds you while you’re taking a walk to clear your head
 “Thinking about the job? Well the solution is simple, don’t destroy our homes"
 <</if>>
-<<if $ edwinVisits == 2 and  $animalHappiness < 30>>
+<<if $edwinVisits == 2 and  $animalHappiness < 30>>
 You think back to what Edwin said when you met him
 “I see everything in this forest”
 You can feel him watching as you chose to do the job.
 <</if>>
-<<if $ edwinVisits == 3 and $animalHappiness > 70>>
+<<if $edwinVisits == 3 and $animalHappiness > 70>>
 Edwin approaches you outside your work
 “I don’t really say thank you often.”
 Edwin leaves
 <</if>>
-<<if $ edwinVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
+<<if $edwinVisits == 3 and $animalHappiness <= 70 and $animalHappiness >= 30>>
 Edwin approaches you where the potential job site
 “So what are you gonna do? Our homes are here. Make the right choice.”
 <</if>>
-<<if $ edwinVisits == 3 and  $animalHappiness < 30>>
+<<if $edwinVisits == 3 and  $animalHappiness < 30>>
 While walking home Edwin approaches you
 “You absolute monster of a human. We trusted you”
 <</if>>
-<<if $ edwinVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
+<<if $edwinVisits > 2 and  $animalHappiness < 20 and $environmentHealth < 25>>>
 Edwin dies, you monster
-<<set $ edwinDies to 1>>
+<<set $edwinDies to 1>>
 <</if>>
 <</nobr>>
 [[Start work for the day| Job]]

@@ -11,8 +11,8 @@ My Twine Game
 
 :: StoryInit
 /* start with 50 happiness for both job and animals*/
-<<set $environmentHealth to 0>>
-<<set $animalHappiness to 0>>
+<<set $environmentHealth to 100>>
+<<set $animalHappiness to 50>>
 <<set $bossHappiness to 50>>
 <<set $jimmyVisits to 0>>
 <<set $jimmyDies to 0>>
@@ -71,19 +71,19 @@ area that works for both was found, but not as good as original area
 <<if tags().includes("Jimmy")>>
 <<set $jimmyVisits to $jimmyVisits + 1>>
 <<if $jimmyDies == 1>>
-$storyList.delete("Jimmy")
+<<set $storyList to $storyList.delete("Jimmy")>>
 <</if>>
 <</if>>
 <<if tags().includes("Tabitha")>>
 <<set $tabithaVisits to $tabithaVisits + 1>>
 <<if $tabithaDies == 1>>
-$storyList.delete("Tabitha")
+<<set $storyList to $storyList.delete("Tabitha")>>
 <</if>>
 <</if>>
 <<if tags().includes("Edwin")>>
 <<set $edwinVisits to $edwinVisits + 1>>
 <<if $edwinDies == 1>>
-$storyList.delete("Edwin")
+<<set $storyList to $storyList.delete("Edwin")>>
 <</if>>
 <</if>>
 
