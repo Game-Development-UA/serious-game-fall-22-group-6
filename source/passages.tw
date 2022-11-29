@@ -90,7 +90,7 @@ You decided to take today off from work. Will you:
 [[Go on a walk, but bring your trusty pack of cigaretts| Smoke]]
 
 <<nobr>>
-<<if $solarInstalled = 0>>
+<<if $solarInstalled == 0>>
 [[Finish installing solar panels on your house| Solar]]
 <</if>>
 <</nobr>>
