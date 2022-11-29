@@ -117,7 +117,7 @@ Hopper dies, you monster
 <<set $HopperDies to 1>>
 <</if>>
 <</nobr>>
-
+[[Start work for the day| Job]]
 
 ANIMAL 2
 
@@ -158,7 +158,7 @@ Sally dies, you monster
 <<set $SallyDies to 1>>
 <</if>>
 <</nobr>>
-
+[[Start work for the day| Job]]
 
 ANIMAL 3
 
@@ -199,3 +199,4 @@ Elliott dies, you monster
 <<set $ElliottDies to 1>>
 <</if>>
 <</nobr>>
+[[Start work for the day| Job]]

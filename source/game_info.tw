@@ -20,8 +20,14 @@ My Twine Game
 <<set $tabithaDies to 0>>
 <<set $edwinVisits to 0>>
 <<set $edwinDies to 0>>
+<<set $HopperVisits to 0>>
+<<set $HopperDies to 0>>
+<<set $SallyVisits to 0>>
+<<set $SallyDies to 0>>
+<<set $ElliottVisits to 0>>
+<<set $ElliotDies to 0>>
 <<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House"]>>
-<<set $storyList = ["Jimmy", "Edwin", "Tabitha"]>>
+<<set $storyList = ["Jimmy", "Edwin", "Tabitha", "Elliot", "Sally", "Hopper"]>>
 
 :: PassageHeader
 <<nobr>>
@@ -84,6 +90,24 @@ area that works for both was found, but not as good as original area
 <<set $edwinVisits to $edwinVisits + 1>>
 <<if $edwinDies == 1>>
 <<set $storyList to $storyList.delete("Edwin")>>
+<</if>>
+<</if>>
+<<if tags().includes("Elliot")>>
+<<set $ElliottVisits to $ElliottVisits + 1>>
+<<if $ElliotDies == 1>>
+<<set $storyList to $storyList.delete("Elliot")>>
+<</if>>
+<</if>>
+<<if tags().includes("Sally")>>
+<<set $SallyVisits to $SallyVisits + 1>>
+<<if $SallyDies == 1>>
+<<set $storyList to $storyList.delete("Sally")>>
+<</if>>
+<</if>>
+<<if tags().includes("Hopper")>>
+<<set $HopperVisits to $HopperVisits + 1>>
+<<if $HopperDies == 1>>
+<<set $storyList to $storyList.delete("Hopper")>>
 <</if>>
 <</if>>
 
