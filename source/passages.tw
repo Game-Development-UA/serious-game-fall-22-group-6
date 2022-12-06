@@ -58,7 +58,7 @@ After having worked many days in a row, you are able to take a day off. However,
 You decide to carry out the job without considering the environmental damage that will come from it.
 <</if>>
 <<if $job == "Zoo">>
-Instead of spending the valuable location on an industrial build, you built a zzoo that focuses on animal preservation
+Instead of spending the valuable location on an industrial build, you built a zoo that focuses on animal preservation
 <</if>>
 <</nobr>>
 [[Carry on to the next day| $story]]
@@ -190,3 +190,49 @@ To spice things up for a bit, you agreed to go work in the coorporate office for
 <<set $environmentHealth to $environmentHealth - random(5,10)>>
 <</nobr>>
 [[After the week ends its back to work on the front lines| Job]]
+
+:: Boss [Boss]
+<<nobr>>
+<<if $bossVisits == 0>>
+You decide to spend you lunch break with your boss today. Your boss is the kind of boss anyone would want, they give you a lot of freedom during work and rarely get mad at you.
+They also know about your little ability to speak to the animals, and about how much the health of the environment means to you. They tell you:
+"Remember this, as much as some of these builds might hurt the environment, people cannot live without homes or hospitals. All of this is a necessary evil in order to keep humanity from falling apart"
+<</if>>
+<<if $bossVisits == 1 and $bossHappiness > 70>>
+Your boss sees you getting ready to start work for the day and calls out to you
+"I know that these decisions are hard to make, but I'm glad you are making sure we get the infrastructure we need."
+<</if>>
+<<if $bossVisits == 1 and $bossHappiness <= 70 and $bossHappiness >= 30>>
+When you get to your work station for the day, you find a little note from your boss
+"Just so you know, the closest hospital to this area just closed down. Would be a real shame if we weren't able to build a new one"
+<</if>>
+<<if $bossVisits == 1 and  $bossHappiness < 30>>
+Your boss storms over to you as you get out of your car
+"This is your first warning. I know you are trying to save the environment and all but you are putting your job and mine in a lot of unnecessary risk right now."
+<</if>>
+<<if $bossVisits == 2 and $bossHappiness > 70>>
+Your boss notices that you have begun to look gloomy over the current state of the environment.
+"As much as this hurts you, thanks to your hard work this community will continue to flourish."
+<</if>>
+<<if $bossVisits == 2 and $bossHappiness <= 70 and $bossHappiness >= 30>>
+Your boss pulls you aside as the day is about to start
+"Remember that with every choice you make, hundreds of people's lives will be impacted."
+<</if>>
+<<if $bossVisits == 2 and  $bossHappiness < 30>>
+Your boss once again angrily storms over to you before you are able to start working
+"This is you second warning. I don't like threating my employee's jobs, but if you continue on your current trends not only will you get fired, but you will have ruined potential life changing development for hundreds of people."
+<</if>>
+<<if $bossVisits == 3 and $bossHappiness > 70>>
+Your boss invites you and some coworkers out for drinks after a long day of work
+"Business is booming and its all thanks to you for making the right decisions. All these new projects that we have scheduled for development will mark the start of a thriving new community."
+<</if>>
+<<if $bossVisits == 3 and $bossHappiness <= 70 and $bossHappiness >= 30>>
+Before starting work for the day, you recall the email your boss sent you the previous night
+"I know you want the best for both us and your animal friends, but at the end of the day, remember that you are a human and you should focus more on your own species."
+<</if>>
+<<if $bossVisits == 3 and  $bossHappiness < 30>>
+You hear your boss call out your name, angrily
+"This is your final warning! Even if I have to fire you for your noble efforts of protecting the animals, the next person put in your place will just erase everything you've done and actually make the right decisions for us. So if you value your job at all, you better start making the right decisions."
+<</if>>
+<</nobr>>
+[[Start work for the day| Job]]
