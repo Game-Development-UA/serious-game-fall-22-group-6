@@ -17,7 +17,6 @@ You can:
 <<set $daysWorked to 0>>
 [[Accept that the repetition is a part of life and go back to work| Job]]
 <</nobr>>
-
 <<else>>
 <<if $bossHappiness > 0>>
 <<if $environmentHealth > 0>>
@@ -177,5 +176,17 @@ Due to the immense boredom you felt at home, you and a good friend of yours hope
 [[Go to work tomorrow| Job]]
 
 :: Office
-To spice things up for a bit, you agreed to go work in the coorporate office for a single work week. 
+To spice things up for a bit, you agreed to go work in the coorporate office for a single work week. Unfortunately, while you were working this temporary job, your boss had promoted a fellow employee to work you position for the week you were gone, and this employee chose to build every building no matter what the damages might be. This causes the animals to think that you just built 5 buildings in a row, and the environment to take some heavy damage.
+<<nobr>>
+<<set $animalHappiness to $animalHappiness - random(4,8)>>
+<<set $environmentHealth to $environmentHealth - random(5,10)>>
+<<set $animalHappiness to $animalHappiness - random(4,8)>>
+<<set $environmentHealth to $environmentHealth - random(5,10)>>
+<<set $animalHappiness to $animalHappiness - random(4,8)>>
+<<set $environmentHealth to $environmentHealth - random(5,10)>>
+<<set $animalHappiness to $animalHappiness - random(4,8)>>
+<<set $environmentHealth to $environmentHealth - random(5,10)>>
+<<set $animalHappiness to $animalHappiness - random(4,8)>>
+<<set $environmentHealth to $environmentHealth - random(5,10)>>
+<</nobr>>
 [[After the week ends its back to work on the front lines| Job]]
