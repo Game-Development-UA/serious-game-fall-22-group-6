@@ -9,6 +9,16 @@ the course of your job while also keeping your boss happy to not get fired.
 [[Go to work for your first day| Job]]
 
 :: Job [Job]
+<<if $daysWorked == 15>>
+You tell your boss that work is getting a bit repetitive with the same 3 tasks being your only options every single day. He tells you that that's how life goes, but does present you with an option
+You can:
+[[Spend one work week on the coorporate side of the company| Office]]
+<<nobr>>
+<<set $daysWorked to 0>>
+[[Accept that the repetition is a part of life and go back to work| Job]]
+<</nobr>>
+<</if>>
+<<if $daysWorked < 15>>
 <<if $bossHappiness > 0>>
 <<if $environmentHealth > 0>>
 Today's job is to build a $job
@@ -41,13 +51,28 @@ After having worked many days in a row, you are able to take a day off. However,
 [[Take the day off| Day Off]]
 <</if>>
 <</nobr>>
+<</if>>
 
 :: BuildJob [Build]
+<<nobr>>
+<<if $job != "Zoo">>
 You decide to carry out the job without considering the environmental damage that will come from it.
+<</if>>
+<<if $job == "Zoo">>
+Instead of spending the valuable location on an industrial build, you built a zzoo that focuses on animal preservation
+<</if>>
+<</nobr>>
 [[Carry on to the next day| $story]]
 
 :: DenyJob [Deny]
+<<nobr>>
+<<if $job != "Zoo">>
 You decide to favor the health of the environment and the animals by not building the $job
+<</if>>
+<<if $job == "Zoo">>
+Even though the proposed build was a zoo that focuses on preserving animal species, you decided to keep the land open for a more industrial build
+<</if>>
+<</nobr>>
 [[Carry on to the next day| $story]]
 
 :: Search For New Spot [Search]
@@ -150,3 +175,7 @@ Due to the immense boredom you felt at home, you and a good friend of yours hope
 <<set $enivronmentHealth to $enivronmentHealth - 2>> 
 <<set $takeOut to 2>>
 [[Go to work tomorrow| Job]]
+
+:: Office
+To spice things up for a bit, you agreed to go work in the coorporate office for a single work week. 
+[[After the week ends its back to work on the front lines| Job]]

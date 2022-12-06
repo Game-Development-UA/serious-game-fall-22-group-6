@@ -31,6 +31,7 @@ Habitual Habitat Destroyer
 <<set $SallyDies to 0>>
 <<set $ElliottVisits to 0>>
 <<set $ElliotDies to 0>>
+<<set $daysWorked to 15>>
 <<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House", "Zoo"]>>
 <<set $storyList = ["Jimmy", "Edwin", "Tabitha", "Elliott", "Sally", "Hopper"]>>
 
@@ -38,23 +39,32 @@ Habitual Habitat Destroyer
 <<nobr>>
 <<if tags().includes("Job")>>
 <<set $consecutiveDays to $consecutiveDays + 1>>
+<<set $daysWorked to $daysWorked + 1>>
 <<set $job to $_jobs.random()>>
 <</if>>
 <<if tags().includes("Build")>>
 <<if $job != "Zoo">>
 <<set $animalHappiness to $animalHappiness - random(4,8)>>
-<<set $bossHappiness to $bossHappiness + 5>>
+<<set $bossHappiness to $bossHappiness + random(4,10)>>
 <<set $environmentHealth to $environmentHealth - 10>>
 <</if>>
 <<if $job == "Zoo">>
 <<set $animalHappiness to $animalHappiness + random(4,8)>>
-<<set $bossHappiness to $bossHappiness - 5>>
+<<set $bossHappiness to $bossHappiness - random(4,10)>>
+<<set $environmentHealth to $environmentHealth + random(1,10)>>
 <</if>>
 <<set $story to $storyList.random()>>
 <</if>>
 <<if tags().includes("Deny")>>
-<<set $animalHappiness to $animalHappiness + 5>>
-<<set $bossHappiness to $bossHappiness - 5>>
+<<if $job != "Zoo">>
+<<set $animalHappiness to $animalHappiness + random(4,8)>>
+<<set $bossHappiness to $bossHappiness - random(4,10)>>
+<<set $environmentHealth to $environmentHealth + random(1,10)>>
+<</if>>
+<<if $job == "Zoo">>
+<<set $animalHappiness to $animalHappiness - random(4,8)>>
+<<set $bossHappiness to $bossHappiness + random(4,10)>>
+<</if>>
 <<set $story to $storyList.random()>>
 <</if>>
 <<if tags().includes("Search")>>
