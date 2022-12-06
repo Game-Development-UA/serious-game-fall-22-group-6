@@ -41,7 +41,7 @@ While spending some time looking at the petential job sight you hear Jimmy talki
 "Those machines look mean. You won’t let them hurt us, will you?"
 <</if>>
 <<if $jimmyVisits == 1 and  $animalHappiness < 30>>
-While watching the construciton crew go to worrk, you see Jimmy with a sad look on his face.
+While watching the construciton crew go to work, you see Jimmy with a sad look on his face.
 "Why would you this? I thought that we were friends."
 <</if>>
 <<if $jimmyVisits == 2 and $animalHappiness > 70>>
