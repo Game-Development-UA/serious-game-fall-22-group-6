@@ -20,6 +20,9 @@ You can:
 <<else>>
 <<if $bossHappiness > 0>>
 <<if $environmentHealth > 0>>
+<<nobr>>
+<img src = "media/hospital.png">
+<</nobr>>
 Today's job is to build a $job
 Will You:
 [[Carry out the job by destroying the nearby forest|BuildJob]]
