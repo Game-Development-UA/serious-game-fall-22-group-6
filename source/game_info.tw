@@ -31,9 +31,10 @@ Habitual Habitat Destroyer
 <<set $SallyDies to 0>>
 <<set $ElliottVisits to 0>>
 <<set $ElliotDies to 0>>
+<<set $bossVisits to 0>>
 <<set $daysWorked to 0>>
 <<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House", "Zoo"]>>
-<<set $storyList = ["Jimmy", "Edwin", "Tabitha", "Elliott", "Sally", "Hopper"]>>
+<<set $storyList = ["Jimmy", "Edwin", "Tabitha", "Elliott", "Sally", "Hopper", "Boss"]>>
 
 :: PassageHeader
 <<nobr>>
@@ -141,4 +142,7 @@ You managed to find a new area to build that is both good for business and the e
 <</if>>
 <<if tags().includes("Job")>>
 <<set $daysWorked to $daysWorked + 1>>
+<</if>>
+<<if tags().includes("Boss")>>
+<<set $bossVisits to $bossVisits + 1>>
 <</if>>
