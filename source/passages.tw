@@ -130,23 +130,29 @@ All the animals that at one point tried to be your friend are now either all dea
 You decided to take today off from work. Will you:
 <<nobr>>
 <<if $walk ==0>>
+<img src = "media/cigarette.png">
 [[Go on a walk, but bring your trusty pack of cigaretts| Smoke]]
 <</if>>
 <<if $walk == 1>>
+<img src = "media/styrofoam.png">
 [[Order take-out from a place that excessively uses styrofoam| TakeOut]]
 <</if>>
 <<if $takeOut == 1>>
+<img src = "media/truck.png">
 [[Go for a long drive in your friend's diesel truck| Ride]]
 <</if>>
 <</nobr>>
 <<nobr>>
 <<if $solarInstalled == 0>>
+<img src = "media/solar.png">
 [[Finish installing solar panels on your house| Solar]]
 <</if>>
 <<if $solarInstalled == 1 and eCar == 0>>
+<img src = "media/ecar.png">
 [[Purchase a consumer friendly electric car| ECar]]
 <</if>>
 <<if $eCar == 1>>
+<img src = "media/garden.png">
 [[Start an at-home garden to grow your own vegetables| Garden]]
 <</if>>
 <</nobr>>
