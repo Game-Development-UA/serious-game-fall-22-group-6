@@ -18,7 +18,7 @@ You can:
 [[Accept that the repetition is a part of life and go back to work| Job]]
 <</nobr>>
 <</if>>
-<<if $daysWorked != 15>>
+<<if $daysWorked < 15>>
 <<if $bossHappiness > 0>>
 <<if $environmentHealth > 0>>
 Today's job is to build a $job
