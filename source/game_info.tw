@@ -39,7 +39,6 @@ Habitual Habitat Destroyer
 <<nobr>>
 <<if tags().includes("Job")>>
 <<set $consecutiveDays to $consecutiveDays + 1>>
-<<set $daysWorked to $daysWorked + 1>>
 <<set $job to $_jobs.random()>>
 <</if>>
 <<if tags().includes("Build")>>
@@ -139,4 +138,7 @@ You managed to find a new area to build that is both good for business and the e
 <<if tags().includes("Break")>>
 <<set $consecutiveDays to 0>>
 <<set $bossHappiness to $bossHappiness - 10>>
+<</if>>
+<<if tags().includes("Job")>>
+<<set $daysWorked to $daysWorked + 1>>
 <</if>>
