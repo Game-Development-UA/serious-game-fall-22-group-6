@@ -87,10 +87,26 @@ All the animals that at one point tried to be your friend are now either all dea
 
 :: Day Off [Break]
 You decided to take today off from work. Will you:
+<<nobr>>
+<<if $walk ==0>>
 [[Go on a walk, but bring your trusty pack of cigaretts| Smoke]]
+<</if>>
+<<if $walk == 1>>
+[[Order take-out from a place that excessively uses styrofoam| TakeOut]]
+<</if>>
+<<if $takeOut == 1>>
+[[Go for a long drive in your friend's diesel truck| Ride]]
+<</if>>
+<</nobr>>
 <<nobr>>
 <<if $solarInstalled == 0>>
 [[Finish installing solar panels on your house| Solar]]
+<</if>>
+<<if $solarInstalled == 1 and eCar == 0>>
+[[Purchase a consumer friendly electric car| ECar]]
+<</if>>
+<<if $eCar == 1>>
+[[Start an at-home garden to grow your own vegetables| Garden]]
 <</if>>
 <</nobr>>
 [[Spend all day relaxing| Relax]]
@@ -98,13 +114,39 @@ You decided to take today off from work. Will you:
 :: Smoke
 While going on your afternoon walk, you decide it would not only be a good idea to start smoking, but to also drop the cigarette butt behind you without thinking. Don't you know anything about how bad that is for the environment?
 <<set $enivronmentHealth to $enivronmentHealth - 1>>
+<<set $walk to 1>>
 [[Go to work tomorrow| Job]]
 
 :: Solar
 You decided to work on installing solar panels on your house for the benefit of the environment
 <<set $enivronmentHealth to $enivronmentHealth + 2>>
+<<set $solarInstalled to 1>>
 [[Go to work tomorrow| Job]]
 
 :: Relax
 After taking the day off, you decided to spend the whole time relaxing around your house, not worrying about the environment, your boss, or anything related to work
+[[Go to work tomorrow| Job]]
+
+:: ECar
+You make the decision to purchase a brand new consumer friendly electric vehicle to no longer have to spend the money on gas
+<<set $enivronmentHealth to $enivronmentHealth + 2>>
+<<set $eCar to 1>>
+[[Go to work tomorrow| Job]]
+
+:: Garden
+Sick of constantly having to go to the store to buy vegetables, you decided to create your own garden at home without using pesticides
+<<set $eCar to 2>>
+<<set $enivronmentHealth to $enivronmentHealth + 2>>
+[[Go to work tomorrow| Job]]
+
+:: TakeOut
+You got hungry and ordered take-out from a place that, despite all the complaints, still uses a very excessive amount of styrofoam packaging
+<<set $takeOut to 1>>
+<<set $enivronmentHealth to $enivronmentHealth - 2>>
+[[Go to work tomorrow| Job]]
+
+:: Ride 
+Due to the immense boredom you felt at home, you and a good friend of yours hoped in your friend's diesel truck for a day trip to the beach, a 3 hour drive each way.
+<<set $enivronmentHealth to $enivronmentHealth - 2>> 
+<<set $takeOut to 2>>
 [[Go to work tomorrow| Job]]

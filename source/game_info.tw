@@ -16,6 +16,9 @@ Habitual Habitat Destroyer
 <<set $bossHappiness to 50>>
 <<set $consecutiveDays to 0>>
 <<set $solarInstalled to 0>>
+<<set $walk to 0>>
+<<set $takeOut to 0>>
+<<set $eCar to 0>>
 <<set $jimmyVisits to 0>>
 <<set $jimmyDies to 0>>
 <<set $tabithaVisits to 0>>
@@ -28,7 +31,7 @@ Habitual Habitat Destroyer
 <<set $SallyDies to 0>>
 <<set $ElliottVisits to 0>>
 <<set $ElliotDies to 0>>
-<<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House"]>>
+<<set $_jobs to ["Hospital","Large Apartment Complex","Factory", "House", "Zoo"]>>
 <<set $storyList = ["Jimmy", "Edwin", "Tabitha", "Elliott", "Sally", "Hopper"]>>
 
 :: PassageHeader
@@ -38,9 +41,15 @@ Habitual Habitat Destroyer
 <<set $job to $_jobs.random()>>
 <</if>>
 <<if tags().includes("Build")>>
-<<set $animalHappiness to $animalHappiness - 5>>
+<<if $job != "Zoo">>
+<<set $animalHappiness to $animalHappiness - random(4,8)>>
 <<set $bossHappiness to $bossHappiness + 5>>
 <<set $environmentHealth to $environmentHealth - 10>>
+<</if>>
+<<if $job == "Zoo">>
+<<set $animalHappiness to $animalHappiness + random(4,8)>>
+<<set $bossHappiness to $bossHappiness - 5>>
+<</if>>
 <<set $story to $storyList.random()>>
 <</if>>
 <<if tags().includes("Deny")>>
