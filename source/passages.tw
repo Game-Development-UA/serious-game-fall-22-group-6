@@ -21,7 +21,21 @@ You can:
 <<if $bossHappiness > 0>>
 <<if $environmentHealth > 0>>
 <<nobr>>
+<<if $job == "Hospital">>
 <img src = "media/hospital.png">
+<</if>>
+<<if $job == "House">>
+<img src = "media/house.png">
+<</if>>
+<<if $job == "Zoo">>
+<img src = "media/zoo.png">
+<</if>>
+<<if $job == "Large Apartment Complex">>
+<img src = "media/apartment.png">
+<</if>>
+<<if $job == "Factory">>
+<img src = "media/factory.png">
+<</if>>
 <</nobr>>
 Today's job is to build a $job
 Will You:
